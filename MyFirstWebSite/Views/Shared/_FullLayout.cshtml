@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="HTML,CSS,XML,JavaScript">
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    <meta name="author" content="Brian" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="~/Scripts/jquery-1.4.4.min.js" )" type="text/javascript"></script>
+    <script src="~/Scripts/jquery.validate.min.js" type="text/javascript"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js" type="text/javascript"></script>
+    <script src="~/Scripts/jquery.json-2.2.min.js" type="text/javascript"></script>
+
+    <script src="~/scripts/My_Code.js" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="~/Content/style.css">
+</head>
+        <body style="background-color:darkgrey">          
+            <div id="wrap">
+                <div id="mainarea">
+                    <div id="header">
+                        <nav>
+                            <ul>
+                                <li><a href="https://www.github.com">GitHub</a></li>
+                                <li><a href="https://www.facebook.com" target="_blank">Facebook</a></li>
+                                <li><a href="https://www.linkedin.com/in/brianthomasjoyce" target="_blank">LinkedIn</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+
+                    <div id="sidebar">
+                        <nav>
+                            <ul>
+                                <li>@Html.ActionLink("About Me", "HomePage", "Index")</li>
+                                <li><a href="https://www.google.ie">Future Projects For Download</a></li>
+                                <li>@Html.ActionLink("CV To Date", "CV", "Index")</li>
+                                <li><a href="https://www.google.ie">Ask A Question</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div id="content">
+                            @RenderBody()
+
+
+                    </div>
+                    <div id="footer">
+                        <ul>
+                            <li><a href="https://www.linkedin.com/in/brianthomasjoyce" target="_blank"><img src="~/graphics/linkedin.jpg" width="48" height="48"></a></li>
+                            <li><a href="https://www.linkedin.com/in/brianthomasjoyce" target="_blank"><img src="/graphics/facebook.jpg" width="48" height="48"></a></li>
+                            <li><a href="https://www.linkedin.com/in/brianthomasjoyce" target="_blank"><img src="/graphics/github.jpg" width="48" height="48"></a></li>
+                        </ul>
+                    </div><!--Main Area-->
+                </div>                        
+              </div>
+        </body>
+</html>

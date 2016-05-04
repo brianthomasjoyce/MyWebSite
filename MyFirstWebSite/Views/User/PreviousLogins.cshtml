@@ -1,0 +1,52 @@
+﻿@model IEnumerable<MyFirstWebSite.Models.UserLoginSessionRecords>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    @RenderPage("~/Views/Shared/_Scripts.cshtml")
+    <meta name="viewport" content="width=device-width" />
+    <title>PreviousLogins</title>
+</head>
+<body>
+    <div id="wrap">
+        <div id="container">
+
+            @RenderPage("~/Views/Shared/_Header.cshtml")
+            @RenderPage("~/Views/Shared/_Sidebar.cshtml")
+            <div id="mainarea">
+                @RenderPage("~/Views/Shared/_MenuOptions.cshtml")
+
+
+                <div id="content">
+                    <table class="table">
+                        <tr>
+                            <th>
+                                @Html.DisplayNameFor(model => model.UserLoginTimeAndDate)
+                            </th>
+                            <th></th>
+                        </tr>
+
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.UserLoginTimeAndDate)
+                                </td>
+                            </tr>
+                        }
+
+                    </table>
+                </div>
+
+                <!--HTML CODE FOR FOOTER -->
+                @RenderPage("~/Views/Shared/_Footer.cshtml")
+            </div>
+        </div>
+    </div>
+</body>
+</html>

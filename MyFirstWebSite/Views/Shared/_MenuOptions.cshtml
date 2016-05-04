@@ -1,0 +1,16 @@
+﻿@{
+    Layout = null;
+}
+
+
+@if(Request.IsAuthenticated)
+{
+
+    <strong>@Html.Encode(User.Identity.Name)</strong>
+    @Html.ActionLink("Log Out", "Logout", "User", new { @class = "button" })<span>|</span>@Html.ActionLink("Check Previos Logins", "PreviousLogins", "User")
+}
+else
+{
+    @Html.ActionLink("Register","Register", "User")
+    <span>|</span>@Html.ActionLink("Log In", "Login", "User")
+}

@@ -1,0 +1,45 @@
+﻿@model MyFirstWebSite.Models.UserLogin
+@{
+    Layout = "~/Views/Shared/_ResponsiveLayout.cshtml";
+}
+
+
+<div class="jumbotron">
+    <div class="container">
+        @using (Html.BeginForm())
+        {
+
+            @Html.ValidationSummary(true, "Login Failed")
+            <div class="row">
+                <div class="col-md-6">
+                    <h2>Login Here</h2>
+                    <fieldset>
+                        <div class="editor-label">@Html.LabelFor(u => u.UserName)</div>
+                        <div class="editor-field">
+                            @Html.TextBoxFor(u => u.UserName)
+                        </div>
+                        <div class="editor-messages">
+                            @Html.ValidationMessageFor(u => u.UserName)
+                        </div>
+
+                        <div class="editor-label">@Html.LabelFor(u => u.Password)</div>
+                        <div class="editor-field">
+                            @Html.PasswordFor(u => u.Password)
+                        </div>
+                        <div class="editor-messages">@Html.ValidationMessageFor(u => u.Password)</div>
+                        <input type="submit" value="Log In" class="btn btn-success" style="margin-top:15px" />
+                    </fieldset>
+                </div>
+                <div class="col-md-6">
+                    <h2>Don't have an account?</h2>
+                    <h2>Click the Button Below</h2>
+                    @Html.ActionLink("Register", "Register", "User", null, new { @class = "btn btn-success text-center" })
+
+
+
+                </div>
+            </div>
+                                  <!--HTML CODE FOR FOOTER -->
+        }
+    </div>
+</div>

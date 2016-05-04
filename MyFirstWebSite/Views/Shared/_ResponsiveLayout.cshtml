@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="keywords" content="HTML,CSS,XML,JavaScript">
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    <meta name="author" content="Brian" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="~/Scripts/jquery-1.4.4.min.js" )" type="text/javascript"></script>
+    <script src="~/Scripts/jquery.validate.min.js" type="text/javascript"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js" type="text/javascript"></script>
+    <script src="~/Scripts/jquery.json-2.2.min.js" type="text/javascript"></script>
+    <script src="~/scripts/My_Code.js" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="~/Content/BootstrapStylesheet.css">
+</head>
+<body style="background-image:url(../graphics/bg_green.jpg)">
+    <div id="wrap">
+        <div id="header">
+            <nav class="navbar navbar-default">
+                <div class="container">
+                    <div class="navbar-header">
+                        <a class="navbar-brand" href="#">Brian Joyce</a>
+                    </div>
+                    <ul class="nav navbar-nav">
+                        <li><a href="#">Github</a></li>
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Linkedin</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <div id="mainarea">
+            @RenderBody()
+        </div>
+        <div id="footer">
+            <nav class="navbar navbar-default">
+                <div class="container">
+                    <ul class="nav navbar-nav">
+                        <li><a href="https://www.linkedin.com/in/brianthomasjoyce" target="_blank"><img src="http://localhost:53083/graphics/linkedin.jpg" width="48" height="48" class="img-responsive"></a></li>
+                        <li><a href="https://www.linkedin.com/in/brianthomasjoyce" target="_blank"><img src="http://localhost:53083/graphics/facebook.jpg" width="48" height="48" class="img-responsive"></a></li>
+                        <li><a href="https://www.linkedin.com/in/brianthomasjoyce" target="_blank"><img src="http://localhost:53083/graphics/github.jpg" width="48" height="48" class="img-responsive"></a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+</body>
+</html>

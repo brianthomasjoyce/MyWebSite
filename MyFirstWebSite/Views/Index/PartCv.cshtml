@@ -1,0 +1,76 @@
+﻿@model MyFirstWebSite.Models.UserLogin
+
+@{
+    ViewBag.Title = "";
+    Layout = "";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    @RenderPage("~/Views/Shared/_Scripts.cshtml")
+</head>
+<body>
+    <div id="wrap">
+        <div id="container">
+
+            @RenderPage("~/Views/Shared/_Header.cshtml")
+
+            <div id="mainarea">
+                @RenderPage("~/Views/Shared/_Sidebar.cshtml")
+
+                @using (Html.BeginForm())
+                {
+                    <div id="content">
+
+                        @Html.ValidationSummary(true, "Login Failed")
+
+                        <div id="left">
+                            <h2>Login Here</h2>
+                            <fieldset>
+                                <div class="editor-label">@Html.LabelFor(u => u.UserName)</div>
+                                <div class="editor-field">
+                                    @Html.TextBoxFor(u => u.UserName)
+                                </div>
+                                <div class="editor-messages">
+                                    @Html.ValidationMessageFor(u => u.UserName)
+                                </div>
+
+                                <div class="editor-label">@Html.LabelFor(u => u.Password)</div>
+                                <div class="editor-field">
+                                    @Html.PasswordFor(u => u.Password)
+                                </div>
+                                <div class="editor-messages">@Html.ValidationMessageFor(u => u.Password)</div>
+                                <input type="submit" value="Log In" class="login" />
+                            </fieldset>
+                        </div>
+                        <div id="right">
+                            <h2 style="text-align:center;">Don't have an account?</h2>
+                            <p></p>
+
+                            @Html.ActionLink("Register", "Register", "User", new { @class = "button" })
+                        </div>
+                    </div>
+
+                        <!--HTML CODE FOR FOOTER -->
+                }
+
+                @RenderPage("~/Views/Shared/_Footer.cshtml")
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

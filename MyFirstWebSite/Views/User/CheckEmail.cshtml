@@ -1,0 +1,30 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Email Verified</title>
+</head>
+<body>
+    <div id="wrap">
+        <div id="container">
+
+            @RenderPage("~/Views/Shared/_Header.cshtml")
+
+            <div id="mainarea">
+                @RenderPage("~/Views/Shared/_Sidebar.cshtml")
+                <div id="content">
+                    <p>Please Check your E-mail for Confirmation Link.</p>
+                </div>
+                @RenderPage("~/Views/Shared/_Footer.cshtml")
+                </div>
+
+        </div>
+    </div>
+</body>
+</html>
